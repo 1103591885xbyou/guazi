@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+	<hibernate-configuration>
+		<session-factory>
+			<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+			<property name="hibernate.connection.url">jdbc:mysql:///Guazi</property>
+			<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+			<property name="hibernate.connection.username">root</property>
+			<property name="hibernate.connection.password">root</property>
+			
+
+			<property name="hibernate.hbm2ddl.auto">update</property>
+			<property name="hibernate.current_session_context_class">thread</property>
+			
+			
+			<mapping resource="com/qianfeng/bean/Basic_parameter.hbm.xml"/>
+			<mapping resource="com/qianfeng/bean/Brand.hbm.xml" />
+			<mapping resource="com/qianfeng/bean/Car.hbm.xml" />
+			<mapping resource="com/qianfeng/bean/Chassis_trig.hbm.xml" />
+			<mapping resource="com/qianfeng/bean/Engine_parameter.hbm.xml" />
+			<mapping resource="com/qianfeng/bean/Img.hbm.xml" />
+			<mapping resource="com/qianfeng/bean/Inner_Configuration.hbm.xml" />			
+			<mapping resource="com/qianfeng/bean/Outer_Configuration.hbm.xml" />
+			<mapping resource="com/qianfeng/bean/Security_Configuration.hbm.xml" />			
+			<mapping resource="com/qianfeng/bean/Series.hbm.xml" />
+			<mapping resource="com/qianfeng/bean/Temporary.hbm.xml" />
+			
+			
+		</session-factory>
+	
+	</hibernate-configuration>

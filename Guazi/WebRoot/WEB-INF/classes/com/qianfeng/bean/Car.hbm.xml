@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+    <hibernate-mapping>
+	    <class name="com.qianfeng.bean.Car" table="car">	    
+		    <id name="id" column="id">
+		    	<generator class="uuid"></generator>
+		    </id>
+		    
+		    <property name="name" column="name"></property>
+			   	<many-to-one name="series" class="com.qianfeng.bean.Series"></many-to-one>
+			<property name="car_license"></property>
+			<property name="mileage"></property>
+			<property name="car_license_location"></property>
+			<property name="gearbox"></property>
+			<property name="owner_price"></property>
+			<property name="newcar_price"></property>
+			<property name="owner_name"></property>
+			<property name="owner_phone"></property>
+			<property name="displacemen"></property>
+			<property name="transfer_ownership"></property>
+			<property name="look_address"></property>
+				<one-to-one name="basic_parameter"  cascade="all" class="com.qianfeng.bean.Basic_parameter"></one-to-one>
+				<one-to-one name="engine_parameter" cascade="all" class="com.qianfeng.bean.Engine_parameter"></one-to-one>
+				<one-to-one name="chassis_trig" cascade="all" class="com.qianfeng.bean.Chassis_trig"></one-to-one>
+				<one-to-one name="security_configuration" cascade="all" class="com.qianfeng.bean.Security_Configuration"></one-to-one>
+				<one-to-one name="outer_configuration" cascade="all" class="com.qianfeng.bean.Outer_Configuration"></one-to-one>
+			 	<one-to-one name="inner_configuration" cascade="all" class="com.qianfeng.bean.Inner_Configuration"></one-to-one>
+				
+				<set name="img_list" cascade="save-update" lazy="false">
+		    		<key column="car"></key>
+		    		<one-to-many class="com.qianfeng.bean.Img" />
+		    	</set>
+		    	
+		    <property name="defect_detection_path"></property>
+		    <property name="top_coat_repair_path"></property>
+		    <property name="metal_plate_repair_path"></property>
+		    <property name="appearance_repair_path"></property>
+	    </class>  
+    </hibernate-mapping>

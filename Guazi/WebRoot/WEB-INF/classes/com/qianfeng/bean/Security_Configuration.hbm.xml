@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    <hibernate-mapping>
+    	<class name="com.qianfeng.bean.Security_Configuration" table="security_Configuration">
+    		<id name="id" column="id">
+		    	<generator class="foreign">
+		    		<param name="property">car</param>
+		    	</generator>
+		 </id>
+		 <one-to-one name="car" class="com.qianfeng.bean.Car" constrained="true"></one-to-one>
+    		<property name="host_vice_steer_airbag" column="host_vice_steer_airbag"></property>
+    		<property name="front_back_exhaust_side_gasbag" column="front_back_exhaust_side_gasbag"></property>
+    		<property name="front_back_row_head_gasbag" column="front_back_row_head_gasbag"></property>
+    		<property name="tire_pressure_monitoring" column="tire_pressure_monitoring"></property>
+    		<property name="internally_operated_central_door" column="internally_operated_central_door"></property>
+    		<property name="isofix" column="isofix"></property>
+    		<property name="comfrot_keyless" column="comfrot_keyless"></property>
+    		<property name="abs" column="abs"></property>
+    		<property name="esp" column="esp"></property>
+    	</class>
+    </hibernate-mapping>
+
+

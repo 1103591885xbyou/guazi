@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name = "com.qianfeng.bean.Basic_parameter" table = "basic_paramter">
+		<id name="id" column="id">
+		    	<generator class="foreign">
+		    		<param name="property">car</param>
+		    	</generator>
+		 </id>
+		 <one-to-one name="car" class="com.qianfeng.bean.Car" constrained="true"></one-to-one>
+		<property name="manufacturer"></property>
+		<property name="motor"></property>
+		<property name="gearbox"></property>
+		<property name="body_structure"></property>
+		<property name="rank"></property>
+		<property name="length_width_height"></property>
+		<property name="wheel_base"></property>
+		<property name="trunk_volume"></property>
+		<property name="curb_weight"></property>
+		
+		
+	</class>
+</hibernate-mapping>

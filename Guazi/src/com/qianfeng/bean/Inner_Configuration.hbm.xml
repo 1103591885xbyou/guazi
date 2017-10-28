@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    <hibernate-mapping>
+    	<class name="com.qianfeng.bean.Inner_Configuration" table="inner_configuration">
+    		<id name="id" column="id">
+		    	<generator class="foreign">
+		    		<param name="property">car</param>
+		    	</generator>
+			 </id>
+			 <one-to-one name="car" class="com.qianfeng.bean.Car" constrained="true"></one-to-one>
+    		<property name="multifunction_steering_wheel" column="multifunction_steering_wheel"></property>
+    		<property name="cruise_control" column="cruise_control"></property>
+    		<property name="air_conditioning" column="air_conditioning"></property>
+    		<property name="automatic_air_conditioning" column="automatic_air_conditioning"></property>
+    		<property name="gps" column="gps"></property>
+    		<property name="car_backing_radar" column="car_backing_radar"></property>
+    		<property name="back_eye_camera" column="back_eye_camera"></property>
+    		<property name="leather_seat" column="leather_seat"></property>
+    		<property name="seat_heating" column="seat_heating"></property>
+
+    	</class>
+    </hibernate-mapping>

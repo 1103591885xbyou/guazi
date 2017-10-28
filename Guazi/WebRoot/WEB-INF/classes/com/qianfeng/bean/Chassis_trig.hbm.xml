@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name = "com.qianfeng.bean.Chassis_trig" table = "chassis_trig">
+		<id name="id" column="id">
+		    	<generator class="foreign">
+		    		<param name="property">car</param>
+		    	</generator>
+		 </id>
+		 <one-to-one name="car" class="com.qianfeng.bean.Car" constrained="true"></one-to-one>
+		
+		<property name="drive_mode"></property>
+		<property name="before_brake_type"></property>
+		<property name="after_brake_type"></property>
+		<property name="power_type"></property>
+		<property name="front_suspension"></property>
+		<property name="rear_suspeusion_fype"></property>
+		<property name="parking_brake_type"></property>
+		<property name="front_tire_type"></property>
+		<property name="rear_tire_type"></property>
+		
+	</class>
+</hibernate-mapping>

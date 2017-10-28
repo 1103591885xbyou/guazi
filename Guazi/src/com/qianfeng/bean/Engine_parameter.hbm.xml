@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name = "com.qianfeng.bean.Engine_parameter" table = "engine_parameter">
+		<id name="id" column="id">
+		    	<generator class="foreign">
+		    		<param name="property">car</param>
+		    	</generator>
+		 </id>
+		 <one-to-one name="car" class="com.qianfeng.bean.Car" constrained="true"></one-to-one>
+		
+		<property name="maxsoup"></property>
+		<property name="alimentation"></property>
+		<property name="displacement"></property>
+		<property name="intake_type"></property>
+		<property name="air_cylinder"></property>
+		<property name="maximum_torque"></property>
+		<property name="fuel_type"></property>
+		<property name="roz"></property>
+		<property name="emission_standard"></property>
+		
+	</class>
+</hibernate-mapping>

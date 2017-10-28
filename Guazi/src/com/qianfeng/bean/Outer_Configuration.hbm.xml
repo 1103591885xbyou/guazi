@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+     <hibernate-mapping>
+    	<class name="com.qianfeng.bean.Outer_Configuration" table="outer_configuration">
+    		<id name="id" column="id">
+		    	<generator class="foreign">
+		    		<param name="property">car</param>
+		    	</generator>
+		 	</id>
+		 	<one-to-one name="car" class="com.qianfeng.bean.Car" constrained="true"></one-to-one>
+    		<property name="auto_electronic_top_window" column="auto_electronic_top_window"></property>
+    		<property name="panoramic_sunroof" column="panoramic_sunroof"></property>
+    		<property name="automatic_suction_door" column="automatic_suction_door"></property>
+    		<property name="feel_the_trunk" column="feel_the_trunk"></property>
+    		<property name="rain_sensing_wipers" column="rain_sensing_wipers"></property>
+    		<property name="rear_wiper" column="rear_wiper"></property>
+    		<property name="fore_and_aft_window" column="fore_and_aft_window"></property>
+    		<property name="rear_view_mirror" column="rear_view_mirror"></property>
+    		<property name="heated_exterior_mirror" column="heated_exterior_mirror"></property>	
+    	</class>
+    </hibernate-mapping>
+    
